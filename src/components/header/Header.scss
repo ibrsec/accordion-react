@@ -1,0 +1,7 @@
+@use "../../sass/variables";
+
+
+header{
+    background-color: variables.$brown-color;
+    color: variables.$light-color;
+}

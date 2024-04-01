@@ -3,3 +3,7 @@
 @use './sass/reset';
 @use './sass/variables';
 
+#root{
+    background-color: variables.$light-color;
+    min-height: 100vh;
+}

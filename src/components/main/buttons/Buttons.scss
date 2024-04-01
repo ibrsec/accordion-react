@@ -1,0 +1,11 @@
+
+
+@use '../../../sass/variables';
+
+button{
+    background-color: variables.$black-color !important;
+    transition: .5s all ease;
+    &:hover{
+        background-color: black !important;
+    }
+}

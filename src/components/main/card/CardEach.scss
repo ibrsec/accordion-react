@@ -1,0 +1,99 @@
+
+@use '../../../sass/variables';
+
+
+div.card-container {
+  .card-name {
+    background-color: variables.$light-color;
+    color: variables.$brown-color;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .card-content-container {
+    background-color: variables.$brown-color;
+    color: variables.$light-color;;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 0px;
+    animation: closeCard .3s ease forwards;
+
+    @keyframes closeCard {
+      from {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 170px;
+
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      to {
+        height: 0px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: none;
+
+      }
+    }
+
+    &.open {
+      display: flex;
+      animation: openCard .7s ease forwards;
+
+      @keyframes openCard {
+        from {
+
+          height: 0px;
+          margin-top: 1px;
+          margin-bottom: 1px;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        to {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          height: 170px;
+
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  div.card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    .img-container {
+      width: 130px;
+      height: 130px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid variables.$light-color;
+      padding: 3px;
+      outline: 3px solid variables.$light-color;
+      outline-offset: 3px;
+    }
+    .user-infos {
+      display: flex;
+      flex-direction: column;
+    }
+    .username {
+      font-weight: 600;
+    }
+    .usermail {
+      text-shadow: 1px 1px 5px black;
+    }
+  }
+}

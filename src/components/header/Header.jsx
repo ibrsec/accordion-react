@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import './Header.scss';
 const Header = () => {
   return (
-    <header className="bg-info">
+    <header className=" ">
       <Container >
-        <h1 className="text-center py-5 text-success">
-          Frequently Asked Questions
+        <h1 className="text-center py-5  ">
+          Random Users with accordion and pagination
         </h1>
       </Container>
     </header>
